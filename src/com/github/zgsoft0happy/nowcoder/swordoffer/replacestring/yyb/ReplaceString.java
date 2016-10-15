@@ -1,4 +1,7 @@
 package com.github.zgsoft0happy.nowcoder.swordoffer.replacestring.yyb;
+
+import java.util.Scanner;
+
 /**
  * <br/>
  * oschina：<a href="https://my.oschina.net/yyb1991">乾坤智林的“三味书屋”</a> <br/>
@@ -15,4 +18,19 @@ package com.github.zgsoft0happy.nowcoder.swordoffer.replacestring.yyb;
  */
 public class ReplaceString {
 
+	public static void main(String[] args) {
+		String str = "I love you!";
+		System.out.println(str);
+		StringBuffer sb = new StringBuffer(str);
+		System.out.println(replace(sb));
+	}
+	
+	public static StringBuffer replace(StringBuffer str){
+		StringBuffer sb = new StringBuffer(str);
+		String newstr = sb.toString();
+		newstr = newstr.replaceAll(" ", "%20");
+		sb = new StringBuffer(newstr);
+		return sb;
+	}
+	
 }
